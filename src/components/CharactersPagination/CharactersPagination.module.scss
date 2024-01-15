@@ -18,14 +18,14 @@
     }
 
     &__button_background {
-        background-image: url('./img/pagination-button.svg');
+        background-image: url('../../../public/img/pagination-button.svg');
         background-size: 100%;
         width: 69px;
         height: 44px;
         background-repeat: no-repeat;
 
         &_active {
-            background-image: url('./img/pagination-button-active.svg');
+            background-image: url('../../../public/img/pagination-button-active.svg');
         }
     }
 

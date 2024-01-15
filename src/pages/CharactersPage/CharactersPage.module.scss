@@ -10,7 +10,7 @@
     position: relative;
 
     .filters {
-        background-image: url('./img/filters-detail.svg');
+        background-image: url('../../../public/img/filters-detail.svg');
         background-repeat: no-repeat;
         background-position: 50% 70%;
         background-size: 100%;
@@ -22,7 +22,7 @@
 
         @include onTablet {
             width: 450px;
-            background-image: url('./img/filters-detail-tablet.svg');
+            background-image: url('../../../public/img/filters-detail-tablet.svg');
             background-repeat: no-repeat;
             background-position: 50% 90%;
             background-size: 100%;
@@ -55,7 +55,7 @@
         }
 
         &_character {
-            background-image: url('./img/card.png');
+            background-image: url('../../../public/img/card.png');
             background-size: cover;
             width: 180px;
             height: 230px;
@@ -67,7 +67,7 @@
 
             &:hover {
                 transform: translateY(-4%);
-                background-image: url('./img/card-bg.png');
+                background-image: url('../../../public/img/card-bg.png');
             }
 
             &_logo {
