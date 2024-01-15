@@ -1,0 +1,87 @@
+@import '../../styles/CharactersPageMixins.scss';
+@import '../../styles/variables.scss';
+
+.custom_select {
+    &__control {
+        width: 230px;
+        background-color: transparent !important;
+        border: none !important;
+        cursor: grab !important;
+
+        @include onDesktop {
+            width: 210px;
+        }
+
+        @include onPhone {
+            width: 185px;
+        }
+
+        &--is-focused {
+            box-shadow: none !important;
+        }
+
+        position: relative !important;
+    }
+
+    &__placeholder {
+        color: $secondary-color !important;
+        font-size: 18px;
+        letter-spacing: 0.8px;
+    }
+
+    &__menu {
+        background-color: $main-color !important;
+        color: $secondary-color !important;
+        width: 240px !important;
+        position: absolute !important;
+        right: -5% !important;
+
+        @include onDesktop {
+            width: 210px !important;
+            right: -1% !important;
+        }
+
+        @include onPhone {
+            width: 190px !important;
+        }
+    }
+
+    &__single-value {
+        color: $secondary-color !important;
+        font-size: 18px;
+        letter-spacing: 0.8px;
+    }
+
+    &__input-container {
+        color: $secondary-color !important;
+        font-size: 18px;
+        letter-spacing: 0.8px;
+    }
+
+    &__option {
+        cursor: grab !important;
+        font-size: 18px;
+        letter-spacing: 0.8px;
+
+        &--is-focused {
+            background-color: rgba(255, 255, 255, 0.247) !important;
+        }
+
+        &--is-selected {
+            background-color: rgba(255, 255, 255, 0.247) !important;
+            color: $main-color !important;
+        }
+    }
+
+    &__indicator {
+        color: $secondary-color !important;
+
+        &:hover {
+            color: $secondary-color !important;
+        }
+
+        &-separator {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,302 @@
+@import '../../styles/animations.scss';
+@import '../../styles/CharactersPageMixins.scss';
+@import '../../styles/variables.scss';
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include onTablet {
+        flex-direction: column;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    @include onTablet {
+        width: 260px;
+    }
+
+    &__block1 {
+        margin-right: 50px;
+
+        @include onDesktop {
+            margin-right: 0;
+        }
+
+        &_genders {
+            color: $main-color;
+            font-size: 20px;
+            display: flex;
+            margin: 80px 0 30px;
+
+            @include onPhone {
+                font-size: 13px;
+                margin: 80px 0 20px 14px;
+            }
+
+            &_item_bg {
+                background-image: url('../../../public/img/checkbox.png');
+                background-repeat: no-repeat;
+                width: 22px;
+                height: 11px;
+                margin: 5px 10px;
+                position: relative;
+
+                &_checked {
+                    background-image: url('../../../public/img/checkbox-checked.png');
+                }
+
+                @include onPhone {
+                    margin: 0 10px;
+                }
+            }
+
+            &_item {
+                position: absolute;
+                top: 0%;
+                left: 11%;
+                width: 16px;
+                height: 16px;
+                opacity: 0;
+                cursor: grab;
+            }
+        }
+
+        &_name_field {
+            margin: 0 0 60px;
+            background-image: url('../../../public/img/name-field.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 350px;
+            height: 50px;
+            position: relative;
+            animation: nameFieldAnimation 3s ease-in-out infinite;
+
+            @include onTablet {
+                margin-bottom: 0;
+                background-size: 350px 50px;
+            }
+
+            @include onPhone {
+                background-size: 300px 50px;
+                background-position: 20%;
+            }
+
+            input {
+                position: absolute;
+                top: 20%;
+                left: 7%;
+                width: 300px;
+                height: 30px;
+                background: transparent;
+                border: none;
+                outline: none;
+                font-size: 18px;
+                font-family: 'Bangers', system-ui;
+                letter-spacing: 1px;
+                color: $secondary-color;
+
+                &::placeholder {
+                    color: $secondary-color;
+                }
+
+                @include onPhone {
+                    left: 9%;
+                }
+            }
+        }
+    }
+
+    &__block2 {
+        margin-left: 50px;
+        position: relative;
+
+        @include onDesktop {
+            margin-left: 20px;
+        }
+
+        @include onTablet {
+            margin-left: 0;
+        }
+
+        &_movies {
+            margin: 60px 0 15px 0;
+            background-image: url('../../../public/img/select.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 250px;
+            height: 49px;
+            position: relative;
+
+            @include onDesktop {
+                background-size: 90% 80%;
+                margin-top: 65px;
+            }
+
+            @include onTablet {
+                background-size: 226px 40px;
+                margin-top: 30px;
+            }
+
+            @include onPhone {
+                background-size: 200px 40px;
+            }
+
+            &_select {
+                position: absolute;
+                top: 2%;
+                left: 4%;
+            }
+        }
+
+        &_reset_btn_background {
+            background-image: url('../../../public/img/reset-filters-button.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 23%;
+            height: 20%;
+            position: absolute;
+            bottom: 51%;
+            left: 73%;
+
+            @include onDesktop {
+                width: 26%;
+                bottom: 48%;
+                left: 74%;
+            }
+
+            @include onTablet {
+                background-size: 85px 60px;
+                height: 60px;
+                bottom: 53%;
+            }
+
+            @include onPhone {
+                left: 65%;
+                bottom: 54%;
+            }
+        }
+
+        &_reset_btn {
+            position: absolute;
+            top: 25%;
+            right: 30%;
+            color: $secondary-color;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: grab;
+            opacity: 0;
+
+            @include onPhone {
+                font-size: 20px;
+            }
+        }
+
+        &_mass {
+            background-image: url('../../../public/img/min-max-mass-details.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 364px;
+            height: 44px;
+            position: relative;
+            margin-bottom: 40px;
+
+            @include onDesktop {
+                width: 324px;
+                height: 38px;
+            }
+
+            @include onTablet {
+                background-size: 325px 42px;
+            }
+
+            @include onPhone {
+                background-size: 300px 42px;
+            }
+
+            &_min {
+                position: relative;
+                height: 40px;
+
+                &_input {
+                    position: absolute;
+                    top: 12%;
+                    left: 7%;
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: 16px;
+                    font-family: 'Bangers', system-ui;
+                    letter-spacing: 1px;
+                    color: $secondary-color;
+                    opacity: 0;
+
+                    
+                &_visible {
+                    opacity: 1;  
+                }
+                }
+
+                &_placeholder {
+                    color: $secondary-color;
+                    position: absolute;
+                    top: 26%;
+                    right: 74%;
+                    font-size: 18px;
+
+                    &_none {
+                        display: none;
+                    }
+                }
+            }
+
+            &_max {
+                position: relative;
+                height: 20px;
+
+                &_input {
+                    position: absolute;
+                    bottom: 130%;
+                    right: 5%;
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    font-size: 16px;
+                    font-family: 'Bangers', system-ui;
+                    letter-spacing: 1px;
+                    color: $secondary-color;
+                    opacity: 0;
+
+                    &_visible {
+                        opacity: 1;
+                    }
+
+                    @include onTablet {
+                        right: 1%;
+                    }
+
+                    @include onPhone {
+                        right: 4%;
+                    }
+                }
+
+                &_placeholder {
+                    color: $secondary-color;
+                    position: absolute;
+                    bottom: 153%;
+                    left: 59%;
+                    font-size: 18px;
+
+                    &_none {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

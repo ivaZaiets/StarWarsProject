@@ -1,0 +1,24 @@
+@import './styles/variables.scss';
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  transition: all .5s;
+}
+
+html {
+  font-family: 'Bangers', system-ui;
+  background-color: $background-color;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1C1C24;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(207, 156, 47, 0.753);
+}

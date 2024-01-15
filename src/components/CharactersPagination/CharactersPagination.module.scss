@@ -1,0 +1,50 @@
+@import '../../styles/CharactersPageMixins.scss';
+@import '../../styles/variables.scss';
+
+.pagination {
+    display: flex;
+    position: relative;
+
+    @include onDesktop {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    @include onTablet {
+        flex-wrap: wrap;
+        width: 85%;
+    }
+
+    &__button_background {
+        background-image: url('../../../public/img/pagination-button.svg');
+        background-size: 100%;
+        width: 69px;
+        height: 44px;
+        background-repeat: no-repeat;
+
+        &_active {
+            background-image: url('../../../public/img/pagination-button-active.svg');
+        }
+    }
+
+    &__button {
+        background: transparent;
+        width: 54px;
+        height: 35px;
+        border: none;
+        font-family: 'Bangers', system-ui;
+        font-size: 16px;
+        color: $main-color;
+        cursor: grab;
+
+        @include onDesktop {
+            flex-wrap: wrap;
+        }
+
+        &_active {
+            color: #1C1C24;
+        }
+    }
+}

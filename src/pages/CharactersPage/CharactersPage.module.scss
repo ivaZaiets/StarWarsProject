@@ -1,0 +1,134 @@
+@import '../../styles/variables.scss';
+@import '../../styles/CharactersPageMixins.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+
+    position: relative;
+
+    .filters {
+        background-image: url('../../../public/img/filters-detail.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 70%;
+        background-size: 100%;
+        width: 880px;
+
+        @include onDesktop {
+            width: 760px;
+        }
+
+        @include onTablet {
+            width: 450px;
+            background-image: url('../../../public/img/filters-detail-tablet.svg');
+            background-repeat: no-repeat;
+            background-position: 50% 90%;
+            background-size: 100%;
+        }
+
+        @include onPhone {
+            width: 230px;
+            background-image: none;
+        }
+    }
+
+    .ch_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-bottom: 120px;
+
+        @include onDesktop {
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-bottom: 130px;
+        }
+
+        @include onTablet {
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 140px;
+        }
+
+        @include onPhone {
+            grid-template-columns: 1fr;
+            margin-bottom: 200px;
+        }
+
+        &_character {
+            background-image: url('../../../public/img/card.png');
+            background-size: cover;
+            width: 180px;
+            height: 230px;
+            margin: 20px;
+            position: relative;
+            color: $main-color;
+            text-decoration: none;
+            cursor: grab;
+
+            &:hover {
+                transform: translateY(-4%);
+                background-image: url('../../../public/img/card-bg.png');
+            }
+
+            &_logo {
+                position: absolute;
+                top: 8%;
+                right: 3%;
+            }
+
+            &_name {
+                font-size: 25px;
+                margin: 70px 10px 16px;
+                text-align: center;
+                line-height: 25px;
+                letter-spacing: 1px;
+            }
+
+            &_details {
+                font-size: 18px;
+                line-height: 20px;
+
+                &_gender {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 20px;
+                }
+
+                &_height {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 20px;
+                }
+
+                &_mass {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 20px;
+                }
+
+                &_birth {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 30px;
+    }
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}

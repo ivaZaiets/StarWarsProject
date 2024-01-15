@@ -1,0 +1,285 @@
+@import '../../styles/variables.scss';
+@import '../../styles/CharacterPageMixins.scss';
+
+.character {
+    background-image: url('../../../public/img/baby-yoda-background.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: 100% 100%;
+
+    @include onDesktop {
+        background-position: 100% 90%;
+    }
+
+    @include onTablet {
+        background-position: 100% 90%;
+    }
+
+    &__background {
+        background-image: url('../../../public/img/character-bg-detail.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 65%;
+        width: 100%;
+        height: 100vh;
+
+        position: relative;
+
+        @include onDesktop {
+            background-size: 75%;
+        }
+
+        @include onTablet {
+            background-image: url('../../../public/img/character-bg-detail-tablet.svg');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 300px;
+        }
+
+        @include onPhone {
+            background-image: url('../../../public/img/character-bg-detail-mobile.svg');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: 300px;
+        }
+    }
+
+    &__no_results {
+        margin-bottom: 10px;
+        color: rgb(180, 149, 81);
+        font-size: 2vw;
+
+        @include onTablet {
+            font-size: 2.5vw;
+        }
+
+        @include onPhone {
+            font-size: 16px;
+        }
+    }
+
+    &__center {
+        &_image {
+            width: 26%;
+            position: absolute;
+            top: 5%;
+            left: 33%;
+
+            @include onDesktop {
+                width: 28%;
+                top: 15%;
+            }
+
+            @include onTablet {
+                width: 220px;
+                top: 16%;
+                left: 14%;
+            }
+
+            @include betweenPhoneAndTablet {
+                top: 16%;
+                left: 4%;
+            }
+
+            @include onPhone {
+                top: 40%;
+                left: -15%;
+                width: 250px;
+            }
+
+        }
+    }
+
+    &__left_side {
+        position: absolute;
+        left: 21%;
+        top: 14%;
+        width: 20%;
+
+        @include onDesktop {
+            left: 18%;
+            top: 20%;
+        }
+
+        @include onTablet {
+            left: 38%;
+            top: 16%;
+        }
+
+        @include betweenPhoneAndTablet {
+            top: 16%;
+            left: 40%;
+        }
+
+        @include onPhone {
+            top: 20%;
+            left: 20%;
+        }
+
+        &_label_name {
+            font-size: 3vw;
+            color: $main-color;
+
+            @include betweenPhoneAndTablet {
+                font-size: 3.5vw;
+            }
+
+            @include onPhone {
+                font-size: 20px;
+            }
+        }
+
+        &_name {
+            color: rgb(180, 149, 81);
+            font-size: 4vw;
+            margin-bottom: 5px;
+
+            @include betweenPhoneAndTablet {
+                font-size: 4.5vw;
+            }
+
+            @include onPhone {
+                font-size: 25px;
+            }
+        }
+    }
+
+    &__right_side {
+        position: absolute;
+        right: 22%;
+        top: 9%;
+        color: $main-color;
+        text-align: right;
+        width: 25%;
+
+        @include onDesktop {
+            right: 18%;
+            top: 18%;
+        }
+
+        @include onTablet {
+            right: 33%;
+            top: 20%;
+            width: 300px;
+        }
+
+        @include betweenPhoneAndTablet {
+            right: 26%;
+        }
+
+        @include onPhone {
+            right: 23%;
+        }
+
+        &_label_species {
+            font-size: 3vw;
+            margin-bottom: 10px;
+
+            @include onTablet {
+                font-size: 3.5vw;
+            }
+
+            @include betweenPhoneAndTablet {
+                font-size: 4vw;
+            }
+
+            @include onPhone {
+                font-size: 18px;
+            }
+        }
+
+        &_species {
+            &_item {
+                color: rgb(180, 149, 81);
+                font-size: 3vw;
+
+                @include onTablet {
+                    font-size: 3.5vw;
+                }
+
+                @include onPhone {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &_label_movies {
+            font-size: 3vw;
+            margin-bottom: 10px;
+
+            @include onTablet {
+                font-size: 3.5vw;
+            }
+
+            @include betweenPhoneAndTablet {
+                font-size: 4vw;
+            }
+
+            @include onPhone {
+                font-size: 20px;
+            }
+        }
+
+        &_movies {
+            &_item {
+                color: rgb(180, 149, 81);
+                font-size: 2vw;
+
+                @include onTablet {
+                    font-size: 2.5vw;
+                }
+
+                @include onTablet {
+                    font-size: 3vw;
+                }
+
+                @include onPhone {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &_label_starships {
+            font-size: 3vw;
+            margin: 10px 0 10px;
+
+            @include onTablet {
+                font-size: 3.5vw;
+            }
+
+            @include betweenPhoneAndTablet {
+                font-size: 4vw;
+            }
+
+            @include onPhone {
+                font-size: 20px;
+            }
+        }
+
+        &_starships {
+            &_item {
+                color: rgb(180, 149, 81);
+                font-size: 2vw;
+
+                @include onTablet {
+                    font-size: 2.5vw;
+                }
+
+                @include onTablet {
+                    font-size: 3vw;
+                }
+
+                @include onPhone {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
