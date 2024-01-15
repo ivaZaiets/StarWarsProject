@@ -46,7 +46,7 @@ export const CharacterPage = () => {
                         <div className={styles.character__center}>
                             <img
                                 className={styles.character__center_image}
-                                src="../../../public/img/character-shadow.svg"
+                                src="./img/character-shadow.svg"
                                 alt="shadow of the character"
                             />
                         </div>

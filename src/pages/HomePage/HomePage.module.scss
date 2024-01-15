@@ -8,7 +8,7 @@
     position: relative;
 
     .stars {
-        background-image: url("../../../public/img/stars.svg");
+        background-image: url("./img/stars.svg");
         background-position: 50% 0%;
         width: 48%;
         height: 110vh;
@@ -33,7 +33,7 @@
     }
 
     .detail_top {
-        background-image: url("../../../public/img/detail-top.png");
+        background-image: url("./img/detail-top.png");
         background-repeat: no-repeat;
         background-size: 39%;
         width: 100%;
@@ -43,7 +43,7 @@
         opacity: 0.8;
 
         @include onTablet {
-            background-image: url("../../../public/img/detail-top-tablet.svg");
+            background-image: url("./img/detail-top-tablet.svg");
             background-size: 100%;
             width: 290px;
             height: 350px;
@@ -52,7 +52,7 @@
         }
 
         @include onPhone {
-            background-image: url("../../../public/img/detail-top-mobile.svg");
+            background-image: url("./img/detail-top-mobile.svg");
             background-size: 100%;
             width: 580px;
             height: 300px;
@@ -63,7 +63,7 @@
     }
 
     .content {
-        background-image: url("../../../public/img/detail-background-block.png");
+        background-image: url("./img/detail-background-block.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 80%;
@@ -75,7 +75,7 @@
         position: fixed;
 
         @include onTablet {
-            background-image: url('../../../public/img/detail-background-block-tablet.svg');
+            background-image: url('./img/detail-background-block-tablet.svg');
             background-repeat: no-repeat;
             background-position: center;
             width: 100%;
@@ -85,7 +85,7 @@
         }
 
         @include onPhone {
-            background-image: url('../../../public/img/detail-background-block-mobile.svg');
+            background-image: url('./img/detail-background-block-mobile.svg');
             background-repeat: no-repeat;
             width: 320px;
             height: 360px;
@@ -151,7 +151,7 @@
             }
 
             &_btn_background {
-                background-image: url("../../../public/img/btn.svg");
+                background-image: url("./img/btn.svg");
                 background-repeat: no-repeat;
                 background-size: 45%;
                 width: 100%;

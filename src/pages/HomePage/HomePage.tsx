@@ -27,13 +27,13 @@ export const HomePage = () => {
 
                 <img
                     className={styles.content__character}
-                    src="../../../public/img/baby-yoda.png"
+                    src="./img/baby-yoda.png"
                     alt="baby yoda"
                 />
 
                 <img
                     className={styles.character_background}
-                    src="../../../public/img/baby-yoda-background.png"
+                    src="./img/baby-yoda-background.png"
                     alt="baby yoda background"
                 />
             </div>

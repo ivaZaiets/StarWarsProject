@@ -72,7 +72,7 @@ export const CharactersPage = () => {
                             >
                                 <img
                                     className={styles.ch_wrapper_character_logo}
-                                    src="../../../public/img/card-logo.svg"
+                                    src="./img/card-logo.svg"
                                     alt="star wars logo"
                                 />
                                 <h1 className={styles.ch_wrapper_character_name}>{character.name}</h1>
