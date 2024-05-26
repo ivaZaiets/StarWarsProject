@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom"
 type Props = {
     searchParams: URLSearchParams,
     setSearchParams: (value: URLSearchParams) => void,
+    setCurrentPage: (value: number) => void,
     query: string,
     genders: string[],
     maxMass: number,
@@ -20,6 +21,7 @@ type Props = {
 export const CharactersFilters: React.FC<Props> = ({
     searchParams,
     setSearchParams,
+    setCurrentPage,
     query,
     genders,
     maxMass,
@@ -90,7 +92,11 @@ export const CharactersFilters: React.FC<Props> = ({
                                         className={styles.filters__block1_genders_item}
                                         checked={genders.includes(gender)}
                                         type="radio"
-                                        onClick={() => handleSetSearchParamsArray(gender)} />
+                                        onClick={() => {
+                                            handleSetSearchParamsArray(gender);
+                                            setCurrentPage(1);
+                                        }} 
+                                    />
                                 </div>
                             </>
                         ))}
@@ -100,7 +106,10 @@ export const CharactersFilters: React.FC<Props> = ({
                             type="text"
                             placeholder="Choose a character name"
                             value={query}
-                            onChange={(event) => handleSetSearchParams(event, 'name')}
+                            onChange={(event) => {
+                                handleSetSearchParams(event, 'name');
+                                setCurrentPage(1);
+                            }}
                         />
                     </div>
 
@@ -112,7 +121,10 @@ export const CharactersFilters: React.FC<Props> = ({
                             <Select
                                 classNamePrefix='custom_select'
                                 options={options}
-                                onChange={handleSelectChange}
+                                onChange={(option) => {
+                                    handleSelectChange(option);
+                                    setCurrentPage(1);
+                                }}
                                 value={selectedOption}
                                 placeholder="Select a movie"
                                 styles={{
@@ -152,8 +164,9 @@ export const CharactersFilters: React.FC<Props> = ({
                                 type="text"
                                 value={minMass}
                                 onChange={(event) => {
-                                    handleSetSearchParams(event, 'minMass')
-                                    setMinMassValue(true)
+                                    handleSetSearchParams(event, 'minMass');
+                                    setMinMassValue(true);
+                                    setCurrentPage(1);
                                 }}
                             />
                         </div>
@@ -171,8 +184,9 @@ export const CharactersFilters: React.FC<Props> = ({
                                 type="text"
                                 value={maxMass}
                                 onChange={(event) => {
-                                    handleSetSearchParams(event, 'maxMass')
-                                    setMaxMassValue(true)
+                                    handleSetSearchParams(event, 'maxMass');
+                                    setMaxMassValue(true);
+                                    setCurrentPage(1);
                                 }}
                             />
                         </div>

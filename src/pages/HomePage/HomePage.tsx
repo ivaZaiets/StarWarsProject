@@ -15,14 +15,11 @@ export const HomePage = () => {
                     <p className={styles.content__description_paragraph}>
                         Ready to choose your favorite character?
                     </p>
-                    <div className={styles.content__description_btn_background}>
-                        <NavLink
-                            className={styles.content__description_btn}
-                            to={"/characters"}
-                        >
-                            Let's do it!
-                        </NavLink>
-                    </div>
+                    <NavLink
+                        to={"/characters"}
+                        className={styles.content__description_btn_background}
+                    >
+                    </NavLink>
                 </div>
 
                 <img

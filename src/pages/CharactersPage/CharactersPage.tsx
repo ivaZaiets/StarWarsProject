@@ -55,6 +55,7 @@ export const CharactersPage = () => {
                         <CharactersFilters
                             searchParams={searchParams}
                             setSearchParams={setSearchParams}
+                            setCurrentPage={setCurrentPage}
                             query={query}
                             genders={genders}
                             maxMass={maxMass}
@@ -94,17 +95,19 @@ export const CharactersPage = () => {
                         ))}
                     </div>
 
-                    <div className={styles.pagination}>
-                        <CharactersPagination
-                            totalPosts={
-                                filteredCharacters.length === 0 && !genders.includes('unknown') ?
-                                    characters.length :
-                                    filteredCharacters.length}
-                            postsPerPage={postsPerPage}
-                            setCurrentPage={setCurrentPage}
-                            currentPage={currentPage}
-                        />
-                    </div>
+                    {filteredCharacters.length !== 0 &&
+                        <div className={styles.pagination}>
+                            <CharactersPagination
+                                totalPosts={
+                                    filteredCharacters.length === 0 && !genders.includes('unknown') ?
+                                        characters.length :
+                                        filteredCharacters.length}
+                                postsPerPage={postsPerPage}
+                                setCurrentPage={setCurrentPage}
+                                currentPage={currentPage}
+                            />
+                        </div>
+                    }
                 </div>
             ) : (
                 <div className={styles.loader}>
